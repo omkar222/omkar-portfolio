@@ -1,122 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Omkar Kulkarni | DevOps Engineer</title>
+    <meta charset="UTF-8">
+    <title>Omkar Kulkarni | DevOps Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
 
-<style>
-:root {
-    --bg: #0f172a;
-    --card: #1e293b;
-    --text: #e2e8f0;
-    --subtext: #94a3b8;
-    --accent: #38bdf8;
-}
+        header {
+            background: #1e293b;
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-body.light {
-    --bg: #f1f5f9;
-    --card: #ffffff;
-    --text: #0f172a;
-    --subtext: #475569;
-    --accent: #2563eb;
-}
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
-    transition: background 0.3s ease, color 0.3s ease;
-}
+        header p {
+            margin-top: 10px;
+            color: #94a3b8;
+        }
 
-body {
-    background: var(--bg);
-    color: var(--text);
-}
+        header a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
 
-header {
-    background: var(--card);
-    padding: 40px 20px;
-    text-align: center;
-}
+        section {
+            max-width: 1000px;
+            margin: auto;
+            padding: 60px 20px;
+        }
 
-header h1 {
-    font-size: 2.5rem;
-}
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 4px solid #38bdf8;
+            padding-left: 10px;
+        }
 
-header p {
-    margin-top: 10px;
-    color: var(--subtext);
-}
+        .card {
+            background: #1e293b;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            transition: 0.3s ease;
+        }
 
-header a {
-    color: var(--accent);
-    text-decoration: none;
-}
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-.toggle-btn {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    padding: 8px 14px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background: var(--accent);
-    color: white;
-    font-weight: 600;
-}
+        .skills span {
+            display: inline-block;
+            background: #334155;
+            padding: 8px 14px;
+            margin: 6px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
 
-section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 60px 20px;
-}
+        ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    border-left: 4px solid var(--accent);
-    padding-left: 10px;
-}
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #1e293b;
+            color: #94a3b8;
+        }
 
-.card {
-    background: var(--card);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.skills span {
-    display: inline-block;
-    background: var(--accent);
-    padding: 6px 12px;
-    margin: 5px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    color: white;
-}
-
-ul {
-    margin-left: 20px;
-    margin-top: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 30px;
-    background: var(--card);
-    color: var(--subtext);
-}
-</style>
+        @media(max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
 
 <header>
     <h1>Omkar Kulkarni</h1>
@@ -124,15 +103,19 @@ footer {
     <p>
         📧 <a href="mailto:omkar2kulkarni@gmail.com">omkar2kulkarni@gmail.com</a> |
         📱 +91 8657041251 <br>
-        🔗 <a href="https://www.linkedin.com/in/omkar2kulkarni" target="_blank">LinkedIn</a>
+        🔗 <a href="https://www.linkedin.com/in/omkar2kulkarni" target="_blank">LinkedIn Profile</a>
     </p>
 </header>
 
 <section>
     <h2>About Me</h2>
     <div class="card">
-        Results-oriented DevOps Engineer with 4 years of experience in CI/CD automation, Dockerized
-        environments, Kubernetes deployments, AWS cloud, monitoring systems and Python scripting.
+        <p>
+            Results-oriented DevOps Engineer with 4 years of experience in CI/CD automation, 
+            Dockerized environments, and Kubernetes deployments. Skilled in AWS, infrastructure 
+            automation, monitoring solutions, and Python scripting to improve system reliability 
+            and deployment efficiency.
+        </p>
     </div>
 </section>
 
@@ -145,11 +128,13 @@ footer {
         <span>Kubernetes</span>
         <span>GitHub Actions</span>
         <span>GitLab CI/CD</span>
+        <span>Terraform</span>
         <span>Ansible</span>
         <span>Prometheus</span>
         <span>Grafana</span>
         <span>Flask</span>
         <span>FastAPI</span>
+        <span>Git</span>
     </div>
 </section>
 
@@ -157,12 +142,23 @@ footer {
     <h2>Experience</h2>
 
     <div class="card">
-        <h3>Software Engineer – KPIT Technologies</h3>
+        <h3>Software Engineer – KPIT Technologies (Nov 2022 – Present)</h3>
         <ul>
-            <li>Reduced deployment time by 60% using GitHub Actions.</li>
+            <li>Reduced deployment time by 60% using GitHub Actions CI/CD pipelines.</li>
             <li>Enabled 200+ weekly automated builds via GitLab CI/CD.</li>
-            <li>Migrated monolithic apps to Kubernetes reducing cost by 30%.</li>
-            <li>Implemented monitoring using Prometheus & Grafana.</li>
+            <li>Dockerized environments improving development efficiency by 50%.</li>
+            <li>Migrated monolithic apps to Kubernetes reducing costs by 30%.</li>
+            <li>Implemented Prometheus & Grafana monitoring with MS Teams alerts.</li>
+            <li>Automated ETL migration scripts using Python.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Associate Software Engineer – KPIT Technologies (Nov 2021 – Nov 2022)</h3>
+        <ul>
+            <li>Built backend services using Python frameworks.</li>
+            <li>Deployed applications using AWS & CI/CD practices.</li>
+            <li>Completed advanced training in DevOps and cloud technologies.</li>
         </ul>
     </div>
 </section>
@@ -172,40 +168,44 @@ footer {
 
     <div class="card">
         <h3>CI/CD Pipeline for Monolithic Application</h3>
-        Automated build, test and deployment using GitHub Actions + Docker + Kubernetes.
+        <ul>
+            <li>Automated build, test, and deploy using GitHub Actions + Docker + Kubernetes.</li>
+            <li>Implemented branch-based deployments and commit-based tagging.</li>
+            <li>Reduced release cycles by 40%.</li>
+        </ul>
     </div>
 
     <div class="card">
-        <h3>Docker Monitoring & Alerting</h3>
-        Configured Prometheus & Grafana dashboards with MS Teams alert integration.
+        <h3>Docker Monitoring & Alerting System</h3>
+        <ul>
+            <li>Configured Prometheus & Grafana dashboards.</li>
+            <li>Integrated Alertmanager with MS Teams webhooks.</li>
+            <li>Reduced incident resolution time by 40%.</li>
+        </ul>
     </div>
 </section>
 
 <section>
     <h2>Education</h2>
     <div class="card">
-        B.Tech – Information Technology (2017–2021)
+        <p><strong>B.Tech – Information Technology</strong><br>
+        DBATU University (2017 – 2021)</p>
+    </div>
+</section>
+
+<section>
+    <h2>Achievements</h2>
+    <div class="card">
+        <ul>
+            <li>Received COMRADE Team Award at KPIT</li>
+            <li>Achieved High CSAT Score 4.99</li>
+        </ul>
     </div>
 </section>
 
 <footer>
-    © 2026 Omkar Kulkarni
+    © 2026 Omkar Kulkarni | DevOps Engineer Portfolio
 </footer>
-
-<script>
-function toggleTheme() {
-    document.body.classList.toggle("light");
-    localStorage.setItem("theme",
-        document.body.classList.contains("light") ? "light" : "dark"
-    );
-}
-
-window.onload = function() {
-    if (localStorage.getItem("theme") === "light") {
-        document.body.classList.add("light");
-    }
-};
-</script>
 
 </body>
 </html>
