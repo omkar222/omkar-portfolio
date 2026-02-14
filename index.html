@@ -1,125 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Omkar Kulkarni | DevOps Engineer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omkar Kulkarni | DevOps Engineer</title>
 
-        body {
-            background: #0f172a;
-            color: #e2e8f0;
-            line-height: 1.6;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-        header {
-            background: #1e293b;
-            padding: 40px 20px;
-            text-align: center;
-        }
+<style>
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e2e8f0;
+    --subtext: #94a3b8;
+    --accent: #38bdf8;
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-        }
+body.light {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #0f172a;
+    --subtext: #475569;
+    --accent: #2563eb;
+}
 
-        header p {
-            margin-top: 10px;
-            color: #94a3b8;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    transition: background 0.3s ease, color 0.3s ease;
+}
 
-        header a {
-            color: #38bdf8;
-            text-decoration: none;
-        }
+body {
+    background: var(--bg);
+    color: var(--text);
+}
 
-        section {
-            max-width: 1000px;
-            margin: auto;
-            padding: 60px 20px;
-        }
+/* Navbar */
+nav {
+    position: fixed;
+    width: 100%;
+    background: var(--card);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
 
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            border-left: 4px solid #38bdf8;
-            padding-left: 10px;
-        }
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    margin-left: 20px;
+    font-weight: 500;
+}
 
-        .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            transition: 0.3s ease;
-        }
+.toggle-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: white;
+}
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+/* Hero */
+.hero {
+    padding: 140px 20px 80px;
+    text-align: center;
+}
 
-        .skills span {
-            display: inline-block;
-            background: #334155;
-            padding: 8px 14px;
-            margin: 6px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-        }
+.hero h1 {
+    font-size: 2.8rem;
+}
 
-        ul {
-            margin-left: 20px;
-            margin-top: 10px;
-        }
+.hero p {
+    margin-top: 10px;
+    color: var(--subtext);
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #1e293b;
-            color: #94a3b8;
-        }
+.contact {
+    margin-top: 15px;
+    font-size: 0.95rem;
+}
 
-        @media(max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-        }
-    </style>
+/* Sections */
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.skills span {
+    display: inline-block;
+    background: var(--accent);
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--card);
+    color: var(--subtext);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav { flex-direction: column; }
+    .hero h1 { font-size: 2rem; }
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <h1>Omkar Kulkarni</h1>
-    <p>DevOps Engineer | CI/CD | Kubernetes | AWS</p>
-    <p>
-        📧 <a href="mailto:omkar2kulkarni@gmail.com">omkar2kulkarni@gmail.com</a> |
-        📱 +91 8657041251 <br>
-        🔗 <a href="https://www.linkedin.com/in/omkar2kulkarni" target="_blank">LinkedIn Profile</a>
-    </p>
-</header>
+<nav>
+    <div><strong>Omkar Kulkarni</strong></div>
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <button class="toggle-btn" onclick="toggleTheme()">Theme</button>
+    </div>
+</nav>
 
-<section>
+<div class="hero">
+    <h1>DevOps Engineer</h1>
+    <p>CI/CD • Kubernetes • AWS • Automation • Monitoring</p>
+    <div class="contact">
+        📧 omkar2kulkarni@gmail.com | 📱 +91 8657041251 <br>
+        🔗 linkedin.com/in/omkar2kulkarni
+    </div>
+</div>
+
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
-        <p>
-            Results-oriented DevOps Engineer with 4 years of experience in CI/CD automation, 
-            Dockerized environments, and Kubernetes deployments. Skilled in AWS, infrastructure 
-            automation, monitoring solutions, and Python scripting to improve system reliability 
-            and deployment efficiency.
-        </p>
+        Results-oriented DevOps Engineer with 4 years of experience in CI/CD automation,
+        Dockerized environments, Kubernetes deployments, and AWS cloud solutions.
+        Proven track record in improving deployment efficiency by 60%, reducing infrastructure
+        costs by 30%, and enhancing system reliability through monitoring solutions.
     </div>
 </section>
 
-<section>
+<section id="skills">
     <h2>Technical Skills</h2>
     <div class="card skills">
         <span>Python</span>
@@ -128,7 +179,6 @@
         <span>Kubernetes</span>
         <span>GitHub Actions</span>
         <span>GitLab CI/CD</span>
-        <span>Terraform</span>
         <span>Ansible</span>
         <span>Prometheus</span>
         <span>Grafana</span>
@@ -138,58 +188,50 @@
     </div>
 </section>
 
-<section>
+<section id="experience">
     <h2>Experience</h2>
 
     <div class="card">
-        <h3>Software Engineer – KPIT Technologies (Nov 2022 – Present)</h3>
+        <h3>Software Engineer – KPIT Technologies (2022–Present)</h3>
         <ul>
-            <li>Reduced deployment time by 60% using GitHub Actions CI/CD pipelines.</li>
-            <li>Enabled 200+ weekly automated builds via GitLab CI/CD.</li>
-            <li>Dockerized environments improving development efficiency by 50%.</li>
+            <li>Reduced deployment time by 60% via GitHub Actions pipelines.</li>
+            <li>Enabled 200+ automated weekly builds using GitLab CI/CD.</li>
             <li>Migrated monolithic apps to Kubernetes reducing costs by 30%.</li>
-            <li>Implemented Prometheus & Grafana monitoring with MS Teams alerts.</li>
-            <li>Automated ETL migration scripts using Python.</li>
+            <li>Implemented Prometheus & Grafana dashboards with MS Teams alerts.</li>
+            <li>Developed Python ETL automation scripts.</li>
         </ul>
     </div>
 
     <div class="card">
-        <h3>Associate Software Engineer – KPIT Technologies (Nov 2021 – Nov 2022)</h3>
+        <h3>Associate Software Engineer – KPIT Technologies (2021–2022)</h3>
         <ul>
             <li>Built backend services using Python frameworks.</li>
-            <li>Deployed applications using AWS & CI/CD practices.</li>
-            <li>Completed advanced training in DevOps and cloud technologies.</li>
+            <li>Deployed applications using AWS and CI/CD best practices.</li>
         </ul>
     </div>
 </section>
 
-<section>
+<section id="projects">
     <h2>Projects</h2>
 
     <div class="card">
         <h3>CI/CD Pipeline for Monolithic Application</h3>
-        <ul>
-            <li>Automated build, test, and deploy using GitHub Actions + Docker + Kubernetes.</li>
-            <li>Implemented branch-based deployments and commit-based tagging.</li>
-            <li>Reduced release cycles by 40%.</li>
-        </ul>
+        Automated build, test and deployment using GitHub Actions + Docker + Kubernetes.
+        Reduced release cycles by 40%.
     </div>
 
     <div class="card">
         <h3>Docker Monitoring & Alerting System</h3>
-        <ul>
-            <li>Configured Prometheus & Grafana dashboards.</li>
-            <li>Integrated Alertmanager with MS Teams webhooks.</li>
-            <li>Reduced incident resolution time by 40%.</li>
-        </ul>
+        Configured Prometheus + Grafana dashboards with MS Teams integration,
+        reducing incident resolution time by 40%.
     </div>
 </section>
 
-<section>
+<section id="education">
     <h2>Education</h2>
     <div class="card">
-        <p><strong>B.Tech – Information Technology</strong><br>
-        DBATU University (2017 – 2021)</p>
+        B.Tech – Information Technology<br>
+        DBATU University (2017–2021)
     </div>
 </section>
 
@@ -197,8 +239,8 @@
     <h2>Achievements</h2>
     <div class="card">
         <ul>
-            <li>Received COMRADE Team Award at KPIT</li>
-            <li>Achieved High CSAT Score 4.99</li>
+            <li>COMRADE Team Award – KPIT</li>
+            <li>High CSAT Score: 4.99</li>
         </ul>
     </div>
 </section>
@@ -206,6 +248,21 @@
 <footer>
     © 2026 Omkar Kulkarni | DevOps Engineer Portfolio
 </footer>
+
+<script>
+function toggleTheme(){
+    document.body.classList.toggle("light");
+    localStorage.setItem("theme",
+        document.body.classList.contains("light") ? "light" : "dark"
+    );
+}
+
+window.onload = function(){
+    if(localStorage.getItem("theme") === "light"){
+        document.body.classList.add("light");
+    }
+}
+</script>
 
 </body>
 </html>
