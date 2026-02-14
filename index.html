@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omkar Kulkarni | DevOps Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --bg: #0f172a;
+    --card: #1e293b;
+    --text: #e2e8f0;
+    --subtext: #94a3b8;
+    --accent: #38bdf8;
+}
+
+body.light {
+    --bg: #f1f5f9;
+    --card: #ffffff;
+    --text: #0f172a;
+    --subtext: #475569;
+    --accent: #2563eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+header {
+    background: var(--card);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    margin-top: 10px;
+    color: var(--subtext);
+}
+
+header a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: var(--accent);
+    color: white;
+    font-weight: 600;
+}
+
+section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 10px;
+}
+
+.card {
+    background: var(--card);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.skills span {
+    display: inline-block;
+    background: var(--accent);
+    padding: 6px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: white;
+}
+
+ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: var(--card);
+    color: var(--subtext);
+}
+</style>
+</head>
+
+<body>
+
+<button class="toggle-btn" onclick="toggleTheme()">Toggle Theme</button>
+
+<header>
+    <h1>Omkar Kulkarni</h1>
+    <p>DevOps Engineer | CI/CD | Kubernetes | AWS</p>
+    <p>
+        📧 <a href="mailto:omkar2kulkarni@gmail.com">omkar2kulkarni@gmail.com</a> |
+        📱 +91 8657041251 <br>
+        🔗 <a href="https://www.linkedin.com/in/omkar2kulkarni" target="_blank">LinkedIn</a>
+    </p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <div class="card">
+        Results-oriented DevOps Engineer with 4 years of experience in CI/CD automation, Dockerized
+        environments, Kubernetes deployments, AWS cloud, monitoring systems and Python scripting.
+    </div>
+</section>
+
+<section>
+    <h2>Technical Skills</h2>
+    <div class="card skills">
+        <span>Python</span>
+        <span>AWS</span>
+        <span>Docker</span>
+        <span>Kubernetes</span>
+        <span>GitHub Actions</span>
+        <span>GitLab CI/CD</span>
+        <span>Ansible</span>
+        <span>Prometheus</span>
+        <span>Grafana</span>
+        <span>Flask</span>
+        <span>FastAPI</span>
+    </div>
+</section>
+
+<section>
+    <h2>Experience</h2>
+
+    <div class="card">
+        <h3>Software Engineer – KPIT Technologies</h3>
+        <ul>
+            <li>Reduced deployment time by 60% using GitHub Actions.</li>
+            <li>Enabled 200+ weekly automated builds via GitLab CI/CD.</li>
+            <li>Migrated monolithic apps to Kubernetes reducing cost by 30%.</li>
+            <li>Implemented monitoring using Prometheus & Grafana.</li>
+        </ul>
+    </div>
+</section>
+
+<section>
+    <h2>Projects</h2>
+
+    <div class="card">
+        <h3>CI/CD Pipeline for Monolithic Application</h3>
+        Automated build, test and deployment using GitHub Actions + Docker + Kubernetes.
+    </div>
+
+    <div class="card">
+        <h3>Docker Monitoring & Alerting</h3>
+        Configured Prometheus & Grafana dashboards with MS Teams alert integration.
+    </div>
+</section>
+
+<section>
+    <h2>Education</h2>
+    <div class="card">
+        B.Tech – Information Technology (2017–2021)
+    </div>
+</section>
+
+<footer>
+    © 2026 Omkar Kulkarni
+</footer>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("light");
+    localStorage.setItem("theme",
+        document.body.classList.contains("light") ? "light" : "dark"
+    );
+}
+
+window.onload = function() {
+    if (localStorage.getItem("theme") === "light") {
+        document.body.classList.add("light");
+    }
+};
+</script>
+
+</body>
+</html>
